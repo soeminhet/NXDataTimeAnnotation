@@ -14,3 +14,7 @@ dependencies {
     implementation(libs.symbol.processing.api)
     implementation(libs.kotlinpoet.ksp)
 }
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+}
